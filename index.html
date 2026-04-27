@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpit Jain</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #00c9ff;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #92fe9d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="name">Mr. ARPIT JAIN</h1>
+        <p>Registration Number: 12304966</p>
+        <p id="line">"Silence reveals truth."</p>
+
+        <button onclick="changeLine()">Change Vibe</button>
+    </div>
+
+    <script>
+        function changeLine() {
+            const lines = [
+                "Silence reveals truth.",
+                "Less noise, more meaning.",
+                "Be, don't just become.",
+                "Time shapes everything."
+            ];
+
+            const random = Math.floor(Math.random() * lines.length);
+            document.getElementById("line").innerText = `"${lines[random]}"`;
+        }
+    </script>
+
+</body>
+</html>
